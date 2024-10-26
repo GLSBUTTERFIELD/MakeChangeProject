@@ -9,7 +9,13 @@ public class CashRegister {
 		System.out.println("What is the amount of money provided? ");
 		double tendered = sc.nextDouble();
 		
+		if (amount > tendered) {
+			System.out.println("Sorry, that's not enough to cover your purchase.");
+		}
 		
+		else if (amount == tendered) {
+			System.out.println("You paid the exact amount of your purchase. Have a great day.");
+		}
 		
 		
 	}
