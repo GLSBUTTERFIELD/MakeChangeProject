@@ -3,9 +3,9 @@
 ## Description
 This program promopts the user for their purchase cost and how much they paid and calculates the amount of change due back in 
 <ul>
-+ twenty dollar bills, 
-+ ten dollar bills, 
-+ five dollar bills, 
+<li>twenty dollar bills,</li> 
++ <li>ten dollar bills, </li>
++ <li>five dollar bills,</li> 
 + one dollar bills,
 + quarters,
 + dimes,
