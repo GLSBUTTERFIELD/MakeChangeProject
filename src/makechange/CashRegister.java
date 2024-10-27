@@ -23,61 +23,88 @@ public class CashRegister {
 		}
 
 		else {
-			amountDue = (int) ((tendered - purchase) * 100);
-			System.out.println(amountDue);
+			amountDue = (int) ((tendered * 100) - purchase * 100);
+			System.out.println("Your change is ");
 
 			if (amountDue / 2000 > 0) {
 				twentiesDue = (amountDue / 2000);
-				System.out.print("Your change is " + twentiesDue + " twenties");
-
+				if (twentiesDue > 1) {
+				System.out.println(twentiesDue + " twenty dollar bills");}
+				else {
+					System.out.println(twentiesDue + " twenty dollar bill");
+				}
 				amountDue = amountDue - (twentiesDue * 2000);
 			}
 
 			if (amountDue / 1000 > 0) {
 				tensDue = (amountDue / 1000);
-				System.out.print(", " + tensDue + " tens");
-				
+				if (tensDue > 1) {
+				System.out.println(tensDue + " ten dollar bills");
+				}
+				else {
+					System.out.println(tensDue + " ten dollar bill");
+				}
 				amountDue = amountDue - (tensDue *1000);
 			}
 			
 			if (amountDue / 500 > 0) {
 				fivesDue = (amountDue / 500);
-				System.out.print(", " + fivesDue + " fives");
+				if (fivesDue > 1) {
+				System.out.println(fivesDue + " five dollar bills ");}
+				else {
+					System.out.println(fivesDue + " five dollar bill");
+				}
 				amountDue = amountDue - (fivesDue * 500);
 			}
 			
 			if (amountDue / 100 > 0) {
 				onesDue = (amountDue / 100);
-				System.out.print(", " + onesDue + " ones");
+				if (onesDue > 1) {
+				System.out.println(onesDue + " one dollar bills"); }
+				else {
+					System.out.println(onesDue + " one dollar bill");
+				}
 				amountDue = amountDue - (onesDue * 100);
 			}
 			
 			if (amountDue / 25 > 0) {
 				quartersDue = (amountDue / 25);
-				System.out.print(", " + quartersDue + " quarters");
+				if (quartersDue > 1 ) {
+				System.out.println(quartersDue + " quarters"); }
+				else {
+					System.out.println(quartersDue + " quarter");}
 				amountDue = amountDue - (quartersDue * 25);
 			}
 			
 			if (amountDue / 10 > 0) {
 				dimesDue = (amountDue /10);
-				System.out.println(", " + dimesDue + " dimes");
+				if (dimesDue > 1) {
+				System.out.println(dimesDue + " dimes");}
+				else {
+					System.out.println(dimesDue + " dime");
+				}
 				amountDue = amountDue - (dimesDue *10);
 			}
 			
 			if (amountDue / 5 > 0) {
 				nickelsDue = (amountDue / 5);
-				System.out.println(", " + nickelsDue + " nickels");
+				if (nickelsDue > 1) {
+				System.out.println(nickelsDue + " nickels");}
+				else {
+					System.out.println(nickelsDue + " nickel");
+				}
 				amountDue = amountDue - (nickelsDue * 5);
 			}
 			
-			else {
+			if (amountDue >= 1) {
 				penniesDue = amountDue;
-				System.out.println(", and " + penniesDue + " pennies.");
+				if (penniesDue > 1) {
+				System.out.println(penniesDue + " pennies");}
+				else {
+					System.out.println(penniesDue + " penny");
+				}
 				amountDue = amountDue - penniesDue;
 			}
-			
-			System.out.println("\n" + amountDue);
-
 		}
 	}
 
